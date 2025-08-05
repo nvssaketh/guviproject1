@@ -56,3 +56,4 @@ topper_score = max(total_scores)
 
 print("\nClass Average: {:.2f}".format(class_average))
 print("Class Topper: {} with {:.2f}".format(topper_name, topper_score))
+
