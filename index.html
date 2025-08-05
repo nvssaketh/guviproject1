@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks & Grades Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>Student Marks & Grades Calculator</h1>
+            <p>Calculate totals, averages, and grades for school subjects with automated class statistics</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Add Student Form -->
+            <div class="add-student-card">
+                <h3><i class="fas fa-plus"></i> Add New Student</h3>
+                <form id="studentForm">
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName" placeholder="Enter student name" required>
+                    </div>
+                    
+                    <div class="subjects-grid">
+                        <div class="subject-group">
+                            <label for="mathematics">Mathematics</label>
+                            <input type="number" id="mathematics" min="0" max="100" step="0.1" placeholder="0-100">
+                        </div>
+                        <div class="subject-group">
+                            <label for="science">Science</label>
+                            <input type="number" id="science" min="0" max="100" step="0.1" placeholder="0-100">
+                        </div>
+                        <div class="subject-group">
+                            <label for="english">English</label>
+                            <input type="number" id="english" min="0" max="100" step="0.1" placeholder="0-100">
+                        </div>
+                        <div class="subject-group">
+                            <label for="social">Social Studies</label>
+                            <input type="number" id="social" min="0" max="100" step="0.1" placeholder="0-100">
+                        </div>
+                        <div class="subject-group">
+                            <label for="arts">Arts</label>
+                            <input type="number" id="arts" min="0" max="100" step="0.1" placeholder="0-100">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">Add Student</button>
+                </form>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <h4>Class Average</h4>
+                    <div class="stat-value" id="classAverage">82.78/100</div>
+                    <div class="stat-grade" id="classGrade">Grade: A</div>
+                </div>
+                
+                <div class="stat-card topper-card">
+                    <h4><i class="fas fa-trophy"></i> Class Topper</h4>
+                    <div class="topper-name" id="topperName">Carol Davis</div>
+                    <div class="topper-score" id="topperScore">95.28/100</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Results Section -->
+        <div class="results-section">
+            <h2>Student Results</h2>
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Math</th>
+                            <th>Science</th>
+                            <th>English</th>
+                            <th>Social</th>
+                            <th>Arts</th>
+                            <th>Total</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Default students will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
